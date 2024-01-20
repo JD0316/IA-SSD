@@ -119,7 +119,7 @@ class IASSD_Backbone(nn.Module):
 
         li_cls_pred = None
         for i in range(len(self.SA_modules)):
-            xyz_input = encoder_xyz[self.layer_inputs[i]]
+            xyz_input = encoder_xyz[self.layer_inputs[i]] # 输入来自哪一层，配置中[0,1,2,3,4,3]
             feature_input = encoder_features[self.layer_inputs[i]]
 
             if self.layer_types[i] == 'SA_Layer':
